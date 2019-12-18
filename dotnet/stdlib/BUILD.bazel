@@ -168,13 +168,15 @@ dotnet_stdlib(name = "System.Reactive.Windows.Threading.dll")
 
 dotnet_stdlib(name = "System.Reflection.Context.dll")
 
-dotnet_stdlib(name = "system.runtime.dll")
+dotnet_stdlib(name = "System.Runtime.dll")
 
 dotnet_stdlib(name = "System.Runtime.Caching.dll")
 
 dotnet_stdlib(name = "System.Runtime.DurableInstancing.dll")
 
 dotnet_stdlib(name = "System.Runtime.Remoting.dll")
+
+dotnet_stdlib(name = "System.Runtime.CompilerServices.Unsafe.dll")
 
 dotnet_stdlib(name = "System.Runtime.Serialization.Formatters.Soap.dll")
 
@@ -259,3 +261,5 @@ dotnet_stdlib(name = "System.Xml.ReaderWriter.dll")
 dotnet_stdlib(name = "system.threading.tasks.extensions.dll")
 
 dotnet_stdlib(name = "system.valuetuple.dll")
+
+dotnet_stdlib(name = "netstandard.dll")
