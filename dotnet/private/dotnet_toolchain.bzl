@@ -68,7 +68,7 @@ def _get_dotnet_stdlib(context_data):
         if basename != "mscorlib.dll":
             continue
         dirname = paths.dirname(f.path)
-        if dirname.find(context_data._libVersion) == -1:
+        if not dirname.endswith(context_data._libVersion):
             continue
         return f
     fail("Could not find mscorlib in dotnet_sdk (lib, %s)" % context_data._libVersion)
@@ -80,7 +80,7 @@ def _get_dotnet_stdlib_byname(shared, lib, libVersion, name):
         if basename.lower() != lname:
             continue
         dirname = paths.dirname(f.path)
-        if dirname.find(libVersion) == -1:
+        if not dirname.endswith(libVersion) and not dirname.endswith(libVersion+"/Facades"):
             continue
         return f
     fail("Could not find %s in dotnet_sdk (lib)" % name)
